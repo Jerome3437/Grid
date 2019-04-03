@@ -1,0 +1,22 @@
+
+
+section{
+    display: flex;
+    border: 3px solid red;
+    flex-direction: row;
+    flex-wrap: wrap; 
+}
+section > article{
+    display: flex;
+    border: 3px solid black;
+    flex-direction: column-reverse;
+    padding: 20px;
+    flex-grow: 1;
+    flex-basis: auto;
+}
+
+section > article:first-child{
+
+    flex-grow: 1;
+    flex-basis: 0;
+}

@@ -1,0 +1,81 @@
+
+  body
+  {
+      background-color: #6C757D;
+}
+
+nav{
+
+    display: flex; /*Axe principal orizontal - passage à la ligne le cas échéant */
+
+    flex-flow: row wrap; /*L'espace à la ligne est mis entre les éléments*/
+}
+
+header nav div {
+  text-decoration: none;
+  color: black;
+  background-color: #FFC107;
+  border-radius: 0.25rem;
+  font-family: arial;
+
+  width: 16%; /* Element qui détermine le flex-basis car il se BASE sur cette donnée pour calculer*/
+
+  padding: 2% 1%;
+  margin: 0 1% 10px 1%;
+  min-width: 130px;
+}
+header nav div:hover {
+  background-color: black;
+  color: white;
+}
+header nav {
+  width: 50%;
+  margin: 0 auto;
+  
+}
+.container-section{
+
+    display: flex;
+    flex-flow: row wrap;
+
+
+}
+
+main section {
+  width: 100%; /*MOBILE-FIRST*/
+}
+main section > div {
+   padding: 2em;
+   margin: 1em;
+   background-color: #fff;
+   border-radius: 8px;
+}
+main section > div > h2 {
+  margin: 0px 0 20px 0;/* haut droit bas gauche */
+}
+
+/* Média queries ********************************/
+    
+/* Supérieur à 1200px*/
+
+@media screen and (min-width:1200px) {
+    main section {
+      width: 25%;
+    }
+  }
+
+/* Entre 992 et 1200px */
+@media screen and (min-width:992px) and (max-width:1200px) {
+  main section {
+    width: 50%;
+  }
+}
+
+/*Entre 768 et 992px*/
+
+@media screen and (min-width: 768px) and (max-width:992px) {
+    main section {
+      width: 33.333333333%;
+    }
+  }
+
